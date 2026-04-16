@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cascade Hideaway — Checklist Quick Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --mahogany: #1C1006;
+  --gold: #C9963A;
+  --gold-lite: #E8B84B;
+  --cream: #F7F2E8;
+  --mocha: #5E503F;
+  --surface: #fff;
+  --border: #E0D8CE;
+  --green: #006B54;
+  --red: #C1414D;
+  --blue: #0369a1;
+  --fb: #1877f2;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Raleway',sans-serif;
+  background:var(--cream);
+  color:var(--mahogany);
+  line-height:1.6;
+  padding-bottom:3rem;
+}
+
+/* ─── HEADER ─── */
+.hdr{
+  background:linear-gradient(160deg,#1a2830 0%,#22333B 35%,#3a3934 60%,#5E503F 85%,#3d3025 100%);
+  padding:2rem 1.25rem 1.5rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.hdr::before{
+  content:'🌿';position:absolute;font-size:90px;opacity:.07;
+  top:-10px;right:-8px;transform:rotate(-15deg);
+}
+.hdr h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.5rem,5vw,2.2rem);
+  font-weight:700;letter-spacing:3px;
+  background:linear-gradient(135deg,#fff 55%,#F5EFE6 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hdr .sub{
+  font-size:.75rem;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:rgba(234,224,213,.7);
+  margin-top:.25rem;
+}
+.hdr .vpill{
+  display:inline-block;margin-top:.75rem;
+  background:rgba(201,150,58,.2);border:1px solid rgba(201,150,58,.4);
+  color:#E8B84B;font-size:.7rem;font-weight:700;
+  letter-spacing:1px;padding:3px 12px;border-radius:20px;
+  text-transform:uppercase;
+}
+
+/* ─── WRAP ─── */
+.w{max-width:640px;margin:0 auto;padding:0 1rem;}
+
+/* ─── SECTION LABEL ─── */
+.slabel{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.82rem;font-weight:800;letter-spacing:.1px;
+  color:var(--mocha);
+  background:rgba(201,150,58,.13);border:1px solid rgba(201,150,58,.3);
+  border-radius:30px;padding:.3rem .95rem;
+  margin:2.25rem 0 1rem;
+}
+
+/* ─── CALLOUT CARDS ─── */
+.callout{
+  border-radius:12px;padding:.95rem 1.1rem;
+  margin-bottom:.75rem;
+  display:flex;align-items:flex-start;gap:.7rem;
+}
+.callout .ico{font-size:1.25rem;flex-shrink:0;margin-top:1px;}
+.callout h3{font-size:.88rem;font-weight:800;margin-bottom:.2rem;}
+.callout p{font-size:.83rem;line-height:1.55;}
+.callout.gold{background:#fffbef;border:1.5px solid rgba(201,150,58,.35);}
+.callout.gold h3{color:var(--mocha);}
+.callout.gold p{color:var(--mocha);}
+.callout.green{background:#e9f5f1;border:1.5px solid rgba(0,107,84,.25);}
+.callout.green h3{color:var(--green);}
+.callout.green p{color:#2a5c4a;}
+.callout.red{background:#fef0f1;border:1.5px solid rgba(193,65,77,.25);}
+.callout.red h3{color:var(--red);}
+.callout.red p{color:#8a2d35;}
+.callout.blue{background:#e8f3fd;border:1.5px solid rgba(3,105,161,.25);}
+.callout.blue h3{color:var(--blue);}
+.callout.blue p{color:#0c4a6e;}
+.callout.fb{background:#e7f1fe;border:1.5px solid rgba(24,119,242,.3);}
+.callout.fb h3{color:var(--fb);}
+.callout.fb p{color:#103d8a;}
+.callout.dark{background:linear-gradient(135deg,#1a2830,#22333B);border:none;}
+.callout.dark h3{color:var(--gold-lite);}
+.callout.dark p{color:rgba(234,224,213,.82);}
+
+/* ─── ANDROID INSTALL STEPS ─── */
+.install-steps{
+  background:#fff;border:1px solid var(--border);border-radius:16px;
+  overflow:hidden;
+  border-top:4px solid var(--gold);
+}
+.install-step{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:.9rem 1.1rem;
+  border-bottom:1px solid var(--border);
+}
+.install-step:last-child{border-bottom:none;}
+.install-step .num{
+  width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(145deg,#E8B84B,#C9963A);
+  color:#fff;font-size:.85rem;font-weight:800;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:1px;box-shadow:0 3px 10px rgba(201,150,58,.4);
+}
+.install-step:nth-child(2) .num{background:linear-gradient(145deg,#34d399,#059669);box-shadow:0 3px 10px rgba(5,150,105,.35);}
+.install-step:nth-child(3) .num{background:linear-gradient(145deg,#60a5fa,#2563eb);box-shadow:0 3px 10px rgba(37,99,235,.35);}
+.install-step:nth-child(4) .num{background:linear-gradient(145deg,#f472b6,#db2777);box-shadow:0 3px 10px rgba(219,39,119,.35);}
+.install-step .txt h4{font-size:.85rem;font-weight:700;color:var(--mahogany);margin-bottom:.15rem;}
+.install-step .txt p{font-size:.81rem;color:var(--mocha);line-height:1.5;}
+.install-step .txt .tag{
+  display:inline-block;
+  background:var(--mahogany);color:var(--gold);
+  font-size:.7rem;font-weight:800;
+  padding:2px 8px;border-radius:6px;
+  margin-left:4px;vertical-align:middle;
+}
+
+/* ─── BIG STEP FLOW ─── */
+.flow{display:flex;flex-direction:column;gap:0;}
+.fstep{
+  display:grid;
+  grid-template-columns:58px 1fr;
+}
+.fstep-left{
+  display:flex;flex-direction:column;align-items:center;
+}
+.fstep-num{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(145deg,#E8B84B 0%,#C9963A 60%,#b07c25 100%);
+  color:#fff;
+  font-family:'Raleway',sans-serif;
+  font-size:1.05rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 4px 14px rgba(201,150,58,.45), 0 1px 3px rgba(0,0,0,.12);
+  position:relative;z-index:1;
+  letter-spacing:-0.5px;
+}
+.fstep:nth-child(2) .fstep-num{background:linear-gradient(145deg,#1877f2,#0a5dc2);box-shadow:0 4px 14px rgba(24,119,242,.4);}
+.fstep:nth-child(3) .fstep-num{background:linear-gradient(145deg,#2d9e75,#006B54);box-shadow:0 4px 14px rgba(0,107,84,.35);}
+.fstep:nth-child(4) .fstep-num{background:linear-gradient(145deg,#f59e0b,#d97706);box-shadow:0 4px 14px rgba(245,158,11,.4);}
+.fstep:nth-child(5) .fstep-num{background:linear-gradient(145deg,#e84393,#c0325d);box-shadow:0 4px 14px rgba(192,50,93,.35);}
+.fstep:nth-child(6) .fstep-num{background:linear-gradient(145deg,#7c3aed,#5b21b6);box-shadow:0 4px 14px rgba(124,58,237,.35);}
+.fstep:nth-child(7) .fstep-num{background:linear-gradient(145deg,#C1414D,#9b2335);box-shadow:0 4px 14px rgba(193,65,77,.38);}
+.fstep:nth-child(8) .fstep-num{background:linear-gradient(145deg,#1877f2,#0a5dc2);box-shadow:0 4px 14px rgba(24,119,242,.4);}
+.fstep:nth-child(9) .fstep-num{background:linear-gradient(145deg,#059669,#047857);box-shadow:0 4px 14px rgba(5,150,105,.35);}
+.fstep-line{
+  width:3px;flex:1;
+  background:repeating-linear-gradient(to bottom,var(--border) 0px,var(--border) 5px,transparent 5px,transparent 10px);
+  margin:5px 0;min-height:16px;
+  border-radius:2px;
+}
+.fstep-body{
+  padding:0 0 1.6rem .5rem;
+  border-left:3px solid transparent;
+  border-radius:0 10px 10px 0;
+}
+.fstep:nth-child(1) .fstep-body{border-left-color:rgba(232,184,75,.5);}
+.fstep:nth-child(2) .fstep-body{border-left-color:rgba(24,119,242,.35);}
+.fstep:nth-child(3) .fstep-body{border-left-color:rgba(45,158,117,.4);}
+.fstep:nth-child(4) .fstep-body{border-left-color:rgba(245,158,11,.45);}
+.fstep:nth-child(5) .fstep-body{border-left-color:rgba(232,67,147,.4);}
+.fstep:nth-child(6) .fstep-body{border-left-color:rgba(124,58,237,.35);}
+.fstep:nth-child(7) .fstep-body{border-left-color:rgba(193,65,77,.4);}
+.fstep:nth-child(8) .fstep-body{border-left-color:rgba(24,119,242,.35);}
+.fstep:nth-child(9) .fstep-body{border-left-color:rgba(5,150,105,.4);}
+.fstep-body .tag-row{margin-bottom:.4rem;}
+.ftag{
+  display:inline-block;font-size:.74rem;font-weight:700;
+  letter-spacing:.05px;
+  padding:4px 12px;border-radius:20px;margin-right:4px;
+}
+.ftag.req{background:#fde8ea;color:#a02030;}
+.ftag.opt{background:#dbeafe;color:#1e40af;}
+.ftag.wknd{background:#ede9fe;color:#5b21b6;}
+.ftag.fb2{background:#dbeafe;color:#1d4ed8;}
+.ftag.new{background:#d1fae5;color:#065f46;}
+.fstep-body h3{
+  font-size:1.05rem;font-weight:800;color:var(--mahogany);
+  margin-bottom:.35rem;line-height:1.3;
+}
+.fstep-body p{font-size:.87rem;color:var(--mocha);line-height:1.62;margin-bottom:.45rem;}
+.fstep-body p:last-child{margin-bottom:0;}
+
+/* ─── FB MESSAGE PREVIEW ─── */
+.fb-preview{
+  background:#fff;border:1px solid #bfdbfe;border-radius:10px;
+  padding:.75rem .9rem;
+  font-family:'Courier New',monospace;font-size:.77rem;
+  color:#1e3a8a;line-height:1.6;
+  white-space:pre-wrap;margin:.4rem 0;
+}
+.fb-btn{
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  background:linear-gradient(135deg,#1877f2,#0a5dc2);
+  color:#fff;border:none;border-radius:9px;
+  padding:.6rem 1rem;font-family:'Raleway',sans-serif;
+  font-size:.82rem;font-weight:700;
+  width:100%;margin:.4rem 0;cursor:default;
+}
+
+/* ─── PHOTO GRID ─── */
+.pgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  gap:.65rem;margin:.5rem 0;
+}
+.pcard{
+  background:#fff;border:1px solid var(--border);
+  border-radius:10px;padding:.8rem .85rem;text-align:center;
+}
+.pcard .pico{font-size:1.4rem;display:block;margin-bottom:.35rem;}
+.pcard h4{font-size:.78rem;font-weight:800;color:var(--mahogany);margin-bottom:.2rem;}
+.pcard p{font-size:.72rem;color:var(--mocha);line-height:1.4;}
+.rdot{display:inline-block;width:7px;height:7px;
+  background:var(--red);border-radius:50%;margin-right:3px;vertical-align:middle;}
+
+/* ─── CRITICAL DEMO ─── */
+.crit-demo{
+  background:#fff;border:1px solid var(--border);
+  border-left:3px solid var(--gold);
+  border-radius:0 12px 12px 0;
+  padding:.9rem 1.1rem;margin:.5rem 0;
+}
+.crit-demo .ctxt{font-size:.9rem;font-weight:700;color:var(--mahogany);margin-bottom:.6rem;}
+.cbrow{display:flex;gap:.5rem;}
+.cbtn{flex:1;padding:.45rem .4rem;border-radius:9px;border:2px solid;
+  font-family:'Raleway',sans-serif;font-size:.8rem;font-weight:700;text-align:center;}
+.cbtn.gd{border-color:#a8d5c5;background:#d0eddf;color:var(--green);}
+.cbtn.is{border-color:#f5d0cc;background:#fad7d4;color:var(--red);}
+
+/* ─── OFFLINE STATUS ─── */
+.sbar{border-radius:10px;padding:.8rem 1rem;font-size:.85rem;font-weight:600;margin:.4rem 0;}
+.sbar.off{background:#fef0f1;border:1.5px solid rgba(193,65,77,.3);color:var(--red);}
+.sbar.on{background:#e9f5f1;border:1.5px solid rgba(0,107,84,.3);color:var(--green);}
+
+/* ─── WATER TIP ─── */
+.meter-eg{
+  display:flex;align-items:center;gap:.5rem;
+  background:#fff;border:1px solid var(--border);border-radius:10px;
+  padding:.75rem 1rem;margin:.4rem 0;font-size:.85rem;font-weight:700;
+}
+.meter-eg .black{color:var(--mahogany);}
+.meter-eg .red2{color:var(--red);}
+.meter-eg .arr{color:var(--mocha);font-size:1rem;}
+.meter-eg .result{color:var(--green);}
+
+/* ─── FOOTER ─── */
+.ftr{
+  background:var(--mahogany);color:rgba(255,255,255,.5);
+  text-align:center;padding:1.5rem 1rem;
+  font-size:.78rem;margin-top:3rem;
+}
+.ftr strong{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <h1>CASCADE HIDEAWAY</h1>
+  <p class="sub">Your cleaning checklist — quick guide 🧹✨</p>
+  <span class="vpill">App v5.5 · April 2026</span>
+</header>
+
+<div class="w">
+
+  <!-- INSTALL ANDROID -->
+  <p class="slabel">📲 Save the app to your phone first</p>
+
+  <div class="callout gold" style="margin-bottom:.85rem;">
+    <span class="ico">📲</span>
+    <div>
+      <h3>Add it to your home screen 🏠</h3>
+      <p>The checklist works in your phone browser — but you can save it to your home screen so it opens like an app, even without internet.</p>
+    </div>
+  </div>
+
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="num">1</div>
+      <div class="txt">
+        <h4>Open the link using Google Chrome</h4>
+        <p>Make sure you are using <strong>Google Chrome</strong> — not the Facebook browser or any other app. Tap the link Lloyd shared to open it.</p>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="num">2</div>
+      <div class="txt">
+        <h4>Tap the 3 dots at the top right <span class="tag">⋮</span></h4>
+        <p>Look for the three vertical dots in the top-right corner of Chrome. Tap them.</p>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="num">3</div>
+      <div class="txt">
+        <h4>Tap "Add to Home screen"</h4>
+        <p>Scroll down the menu a little if you don't see it. Tap it once.</p>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="num">4</div>
+      <div class="txt">
+        <h4>Tap "Add" — and you're done! 🎉</h4>
+        <p>A Cascade Hideaway icon will appear on your home screen. Next time, just tap that icon to open the app — no need to open Chrome first.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout green" style="margin-top:.75rem;">
+    <span class="ico">✅</span>
+    <div>
+      <h3>Works even when there's no signal!</h3>
+      <p>Once saved, the app opens instantly from your home screen — even inside the condo with no internet. Your report is saved and sent automatically when you reconnect.</p>
+    </div>
+  </div>
+
+  <!-- HOW TO USE -->
+  <p class="slabel">🚀 Here's how it works — step by step</p>
+
+  <div class="flow">
+
+    <!-- STEP 1 -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">1</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag req">Required · takes 1 min</span></div>
+        <h3>👋 Enter your name and the date</h3>
+        <p>Tap your name from the list. If your name is not there, tap <strong>"Type name manually"</strong> and type it.</p>
+        <p>Check that the date and start time are correct. The <strong>Next</strong> button stays grey until you enter your name — this is normal.</p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">2</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag fb2">💬 Facebook Group Chat</span><span class="ftag req">Required</span></div>
+        <h3>📸 Send before-photos to the group chat first</h3>
+        <p><strong>Do this before you start cleaning!</strong> Tap the blue <strong>"Open Group Chat"</strong> button. The app automatically copies a ready-made message for you.</p>
+        <div class="fb-preview">📸 PRE-CLEAN PHOTOS
+📅 Saturday, April 19, 2026
+🧹 Cleaner: Jary Mabandos
+📍 Cascade Hideaway
+
+[Photos attached — see areas in checklist]</div>
+        <p>In Messenger: <strong>paste</strong> the copied text, then attach your room photos (living area, bedroom, bathroom, kitchen) and send. These photos protect you and the host!</p>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">3</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag req">Required</span></div>
+        <h3>⚡💧 Record the meter readings + take photos</h3>
+        <p>Still on the Pre-Clean tab. Enter the <strong>electric meter reading</strong> (kWh) and the <strong>water meter reading</strong> (m³). The app will show you the previous readings automatically.</p>
+
+        <div class="callout red" style="margin:.5rem 0 .5rem;">
+          <span class="ico">💧</span>
+          <div>
+            <h3>💧 Water meter — always add the decimal point!</h3>
+            <p>The last 3 digits on the water meter are after the decimal. For example: if the meter shows <strong>0003 7 | 2 8 8</strong>, type <strong>37.288</strong> — not 37288. The app will warn you if you forget.</p>
+          </div>
+        </div>
+
+        <p>After entering the readings, take <strong>exactly 2 photos</strong> — one photo of the electric meter and one of the water meter. All digits must be sharp and readable.</p>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">4</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag opt">Go through each tab</span></div>
+        <h3>🧹 Check items off as you clean</h3>
+        <p>Swipe left or tap the tabs at the bottom to move between sections:</p>
+        <p><strong>Arrive → Chem → Room → Bath → Final</strong></p>
+        <p>Tick each item as you finish it. The progress bar fills up as you go — try to hit 100%! 🎯 Found a problem? Tap the <strong>"⚠️ Found a Problem Here?"</strong> button to upload a photo and leave a note all in one go.</p>
+      </div>
+    </div>
+
+    <!-- STEP 5 CRITICAL -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">5</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag req">Can't skip these! 🔒</span></div>
+        <h3>🔴 Some items need a tap — not just a checkbox</h3>
+        <p>For critical items, you must tap one of the two buttons below. You can't submit without answering all of them:</p>
+        <div class="crit-demo">
+          <div class="ctxt">🗝️ Verify Key Card Is in Its Designated Spot on Keychain</div>
+          <div class="cbrow">
+            <div class="cbtn gd">✅ All Good</div>
+            <div class="cbtn is">⚠️ Issue Found</div>
+          </div>
+        </div>
+        <p>Tap <strong>Issue Found</strong>? A text box appears — describe the problem and take a photo. The host will be notified right away.</p>
+      </div>
+    </div>
+
+    <!-- STEP 6 WEEKEND -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">6</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag wknd">🗓️ Weekends only</span></div>
+        <h3>🔧 Weekend? There's a bonus tab for you!</h3>
+        <p>On Saturdays and Sundays, an extra <strong>Weekly</strong> tab shows up between Final and Submit. It has deeper cleaning tasks like washing AC filters, cleaning the fridge inside, clearing drains, and checking all light bulbs. Finish those too before submitting!</p>
+      </div>
+    </div>
+
+    <!-- STEP 7 SUBMIT -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">7</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag req">Required</span></div>
+        <h3>✅ Tap Submit — you're almost done!</h3>
+        <p>On the last tab, tap <strong>"✅ Submit Report"</strong>. The app sends everything to the host automatically — the spreadsheet, an email, and a calendar entry — all in one go. 🙌</p>
+
+        <div class="sbar off">📵 No connection — your data is safe. Will retry when back online.</div>
+        <div class="sbar on">🔄 Back online — retrying your submission…</div>
+
+        <p>If you see the red message — <strong>don't close the app!</strong> Just move closer to a window or step outside. The app will send your report automatically as soon as it catches signal. 📶</p>
+      </div>
+    </div>
+
+    <!-- STEP 8 FB AFTER -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">8</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag fb2">💬 Facebook Group Chat</span><span class="ftag req">Required</span></div>
+        <h3>💬 Send your after-photos to the group chat</h3>
+        <p>After submitting, a success screen pops up! Tap <strong>"💬 Copy Report &amp; Send After Photos"</strong> — this copies a neat summary and opens Messenger automatically.</p>
+        <p>In Messenger: <strong>paste</strong> the text, attach your after-cleaning photos (living area, bedroom, bathroom, kitchen), and send.</p>
+        <p>Before-photos at the start + after-photos at the end = the full cleaning record. 📸✅</p>
+      </div>
+    </div>
+
+    <!-- STEP 9 INVENTORY -->
+    <div class="fstep">
+      <div class="fstep-left">
+        <div class="fstep-num">9</div>
+        <div class="fstep-line"></div>
+      </div>
+      <div class="fstep-body">
+        <div class="tag-row"><span class="ftag opt">Bonus step 🌟</span></div>
+        <h3>🧴 Log which supplies you used</h3>
+        <p>On the success screen, tap <strong>"Open Inventory"</strong> and log how much of each supply you used — soap, shampoo, coffee packs, water bottles, etc. This helps the host restock on time so you never run out mid-cleaning!</p>
+      </div>
+    </div>
+
+  </div><!-- /flow -->
+
+  <!-- REQUIRED PHOTOS -->
+  <p class="slabel">📸 Photos you need to take</p>
+
+  <div class="pgrid">
+    <div class="pcard">
+      <span class="pico">⚡💧</span>
+      <h4><span class="rdot"></span>Meters</h4>
+      <p>Exactly 2 photos. Electric + water. All digits sharp.</p>
+    </div>
+    <div class="pcard">
+      <span class="pico">🛏️</span>
+      <h4><span class="rdot"></span>Bedroom</h4>
+      <p>Max 2 photos. Full room + finished bed close-up.</p>
+    </div>
+    <div class="pcard">
+      <span class="pico">💧</span>
+      <h4><span class="rdot"></span>Kitchen &amp; Bath</h4>
+      <p>Max 3 photos. Bathroom + kitchen + sink close-up.</p>
+    </div>
+    <div class="pcard">
+      <span class="pico">✨</span>
+      <h4><span class="rdot"></span>Final</h4>
+      <p>Max 2 photos. Full room from doorway.</p>
+    </div>
+  </div>
+
+  <div class="callout blue" style="margin-top:.75rem;">
+    <span class="ico">💬</span>
+    <div>
+      <h3>Got more photos? Send them via Messenger 💬</h3>
+      <p>Each section has a maximum. For extra damage photos, extra detail shots, or anything that doesn't fit — send directly to the Cascade Hideaway group chat in Messenger.</p>
+    </div>
+  </div>
+
+  <!-- QUICK VS DETAIL -->
+  <p class="slabel">💡 One handy tip</p>
+
+  <div class="callout gold">
+    <span class="ico">📋</span>
+    <div>
+      <h3>Switch between Detail mode and Quick mode</h3>
+      <p>There is a small button in the bottom bar of the app. Tap it to switch between <strong>Detail</strong> (shows all instructions — good when you are still learning) and <strong>Quick</strong> (hides the instructions — faster once you know the steps).</p>
+    </div>
+  </div>
+
+  <!-- OFFLINE -->
+  <p class="slabel">📡 Lost signal? Don't worry!</p>
+
+  <div class="callout dark">
+    <span class="ico">📡</span>
+    <div>
+      <h3>Your data is always safe, promise! 🛡️</h3>
+      <p>The app saves your entire report as you fill it out. Even if you submit with no signal, it holds the data and sends it automatically when your connection comes back. <strong>Do not close the app</strong> — just wait for the green message.</p>
+    </div>
+  </div>
+
+</div><!-- /w -->
+
+<footer class="ftr">
+  <p>Questions? Contact <strong>cascadereservations@gmail.com</strong> or Jary — <strong>09618056979</strong></p>
+  <p style="margin-top:.35rem;">© 2026 Cascade Hideaway · Cleaning Checklist App v5.5</p>
+</footer>
+
+</body>
+</html>
